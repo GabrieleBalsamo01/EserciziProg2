@@ -130,6 +130,7 @@ int main()
 	due.cancellazione(9);
 
 	cout<<due<<endl;
+cout<<"ciao"<<endl;
 
 	return 0;
 }
