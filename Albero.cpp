@@ -14,9 +14,8 @@ class Nodo
 
 class Albero
 {
-	Nodo* radice;
-	
 	public:
+		Nodo* radice;
 		Albero() 
 		{
 			radice=NULL;
@@ -155,18 +154,54 @@ class Albero
 			}		
 		}
 		
-	int altezza(Nodo* p)const
-    {
-    	if (p==NULL) return 0;		
-
-	    int lh = altezza(p->left);
-	    int rh = altezza(p->right);
+		Nodo* getradice()
+		{
+			return radice;
+		}
+		
+		void inorder(Nodo* i)
+		{
+			if(i)
+			{
+				inorder(i->left);
+				cout<< i->val<<" ";
+				inorder(i->right);
+			}
+		}
+		
+		void preorder(Nodo* i)
+		{
+			if(i)
+			{
+				cout<< i->val<<" ";
+				inorder(i->left);	
+				inorder(i->right);
+			}
+		}
+		
+		void postorder(Nodo* i)
+		{
+			if(i)
+			{
+				inorder(i->left);
+				inorder(i->right);
+				cout<< i->val<<" ";
+			}
+		}
+		
+		int altezza(Nodo* p)const
+	    {
+	    	if (p==NULL) return 0;		
 	
-	    if(lh>rh)   
-			return (lh+1);
-	    else        
-			return (rh+1);
-	}
+		    int lh = altezza(p->left);
+		    int rh = altezza(p->right);
+		
+		    if(lh>rh)   
+				return (lh+1);
+		    else        
+				return (rh+1);
+		}
+		
 		
 friend ostream& operator << (ostream& out, const Albero& x);		
 
@@ -221,5 +256,12 @@ a.inserimento(2);
 	a.cancellazione(17);			// solo figlio destro
 
 	cout<<a<<endl;
-
+	cout<<endl<<"Visita inOrder: ";
+	a.inorder(a.getradice());
+	
+	cout<<endl<<"Visita preOrder: ";
+	a.preorder(a.getradice());
+	
+	cout<<endl<<"Visita postOrder: ";
+	a.postorder(a.getradice());
 }
