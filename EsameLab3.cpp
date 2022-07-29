@@ -163,13 +163,13 @@ class Albero
 	    {
 	    	if (p==NULL) return 0;		
 	
-		    int lh = altezza(p->left);
-		    int rh = altezza(p->right);
+		    int a = altezza(p->left);
+		    int b = altezza(p->right);
 		
-		    if(lh>rh)   
-				return (lh+1);
+		    if(a>b)   
+				return (a+1);
 		    else        
-				return (rh+1);
+				return (b+1);
 		}
 		
 template <typename U>		
@@ -177,21 +177,21 @@ friend ostream& operator << (ostream& out, const Albero<U>& x);
 
 };
 template <typename T>
-void stampaLivello(Nodo<T>* p, int level)
+void stampa(Nodo<T>* p, int l)
 { 
     if(p == NULL)						// se p punta ad una posizione vuota
 	{
-        if (level==0) 					// se siamo al livello 0 quindi quello della foglia finale
+        if (l==0) 					// se siamo al livello 0 quindi quello della foglia finale
 			cout << "_\t";
         return;
     }
 
-    if(level == 0)						// se siamo al livello 0
+    if(l == 0)						// se siamo al livello 0
        cout << p->val << "\t";			// stampa il valore del nodo presente in quel livello (essendo solo uno, non serve fare altro)
-    else if(level>0)					// se siamo ad un livello superiore
+    else if(l>0)					// se siamo ad un livello superiore
 	{					
-        stampaLivello(p->left,level-1);		// richiama la funzione passando il figlio sinistro e decrementa il livello di uno
-        stampaLivello(p->right,level-1);	// richiama la funzione passando il figlio destro e decrementa il livello di uno
+        stampa(p->left,l-1);		// richiama la funzione passando il figlio sinistro e decrementa il livello di uno
+        stampa(p->right,l-1);	// richiama la funzione passando il figlio destro e decrementa il livello di uno
     }
 
 }
@@ -201,7 +201,7 @@ ostream& operator<<(ostream&out, const Albero<U>& x)
     int h = x.altezza(x.radice);
     for(int i=0;i<h;i++)
 	{
-        stampaLivello(x.radice, i);
+        stampa(x.radice, i);
         cout << endl;
     }
     return out;
@@ -217,7 +217,7 @@ int main()
 		a.inserimento(3); 					a.inserimento(11);
 a.inserimento(2); 				
 	*/ 	 	 	 	
-/	
+	
 a.inserimento(10); a.inserimento(4);a.inserimento(8); a.inserimento(10);a.inserimento(11);a.inserimento(2);a.inserimento(11);a.inserimento(6);
 a.inserimento(15);a.inserimento(19);a.inserimento(13);a.inserimento(21);a.inserimento(1);a.inserimento(2);a.inserimento(10);a.inserimento(13);
 a.inserimento(11);a.inserimento(16);a.inserimento(18);a.inserimento(20);a.inserimento(21);a.inserimento(10); a.inserimento(7); a.inserimento(32);	 	 	 	

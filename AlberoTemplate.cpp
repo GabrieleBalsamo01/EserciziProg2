@@ -195,13 +195,13 @@ class Albero
 	    {
 	    	if (p==NULL) return 0;		
 	
-		    int lh = altezza(p->left);
-		    int rh = altezza(p->right);
+		    int a = altezza(p->left);
+		    int b = altezza(p->right);
 		
-		    if(lh>rh)   
-				return (lh+1);
+		    if(a>b)   
+				return (a+1);
 		    else        
-				return (rh+1);
+				return (a+1);
 		}
 		
 template <typename U>		
@@ -209,23 +209,22 @@ friend ostream& operator << (ostream& out, const Albero<U>& x);
 
 };
 template <typename T>
-void stampaLivello(Nodo<T>* p, int level)
+void stampa(Nodo<T>* p, int l)
 { 
     if(p == NULL)						// se p punta ad una posizione vuota
 	{
-        if (level==0) 					// se siamo al livello 0 quindi quello della foglia finale
+        if (l==0) 					// se siamo al livello 0 quindi quello della foglia finale
 			cout << "_\t";
         return;
     }
 
-    if(level == 0)						// se siamo al livello 0
+    if(l == 0)						// se siamo al livello 0
        cout << p->val << "\t";			// stampa il valore del nodo presente in quel livello (essendo solo uno, non serve fare altro)
-    else if(level>0)					// se siamo ad un livello superiore
+    else if(l>0)					// se siamo ad un livello superiore
 	{					
-        stampaLivello(p->left,level-1);		// richiama la funzione passando il figlio sinistro e decrementa il livello di uno
-        stampaLivello(p->right,level-1);	// richiama la funzione passando il figlio destro e decrementa il livello di uno
+        stampa(p->left,l-1);		// richiama la funzione passando il figlio sinistro e decrementa il livello di uno
+        stampa(p->right,l-1);	// richiama la funzione passando il figlio destro e decrementa il livello di uno
     }
-
 }
 template <typename U>
 ostream& operator<<(ostream&out, const Albero<U>& x)
@@ -233,7 +232,7 @@ ostream& operator<<(ostream&out, const Albero<U>& x)
     int h = x.altezza(x.radice);
     for(int i=0;i<h;i++)
 	{
-        stampaLivello(x.radice, i);
+        stampa(x.radice, i);
         cout << endl;
     }
     return out;
