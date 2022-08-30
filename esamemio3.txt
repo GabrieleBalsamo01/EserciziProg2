@@ -1,0 +1,8 @@
+Auto: Fiat 6 - 500:17000 500C:19500 Panda 4x4:18950 500L:21050 Panda:15000 Tipo 5 porte:20950 
+Auto: Audi 5 - TT Coupe:44400 A1 allstreet:25200 Q2:29050 A1 Sporback:23100 Q3:37300
+Auto: Lamborghini 3 - Huracan Spyder:214522 Huracan:195070 Urus:227086
+Auto: Ferrari 5 - Roma:205736 SF90 Spider:478498 296 GTB:275110 Portofino:205100 SF90 Stradale:440468
+Auto: Mercedes 6 - GLA:35580 A:27890 Citan Tourer:26459 B:26097 GLB:35390  C Coupe:44201
+Moto: Ducati 5 - 1098:23503.50 1198:36224.50 1199 Superleggera:42000.50 1299 Panigale:34200.50 749:21300.50
+Moto: Aprilia 5 - RSV4:17000.50 Atlantic:12000.50 Caponord 1200:13000.50 Dorsoduro:15500.50 MXV:18220.50
+Moto: Ktm 4 - 150 Adventure:32000.50 690:27500.50 690 Duke R:31500.50 990 SM T:19260.50
