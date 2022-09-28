@@ -64,9 +64,9 @@ class Lista
 			i=i->succ;
 		}
 		nuovo->prec=i;
-		nuovo->succ=i->succ;	
-		i->succ=nuovo;
-		i->succ->prec=nuovo->succ;
+		nuovo->succ=i->succ;
+		i->succ->prec=nuovo;	
+		i->succ=nuovo;	
 		return;
 	}
 
@@ -77,7 +77,7 @@ class Lista
 		appoggio=NULL;
 		if(i->val==x)
 		{
-			i->succ->prec=NULL;
+			i.succ->prec=NULL;
 			testa=i->succ;
 			delete i;
 			return;
@@ -148,5 +148,3 @@ int main()
 	cout<<due<<endl;
 	return 0;
 }
-
-

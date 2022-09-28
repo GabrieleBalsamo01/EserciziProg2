@@ -1,6 +1,6 @@
 /*
-Si legga il file e si inseriscano gli elementi in una lista semplicemente linkata, modellando gli elementi con una oppurtuna classe, che ridefinisca anche 
-l'operatore <<. Si rimuovano gli elementi della lista e si inseriscano in un BST, che dovrà implementare le funzionalità di:
+Si legga il file e si inseriscano gli elementi in una lista semplicemente linkata, modellando gli elementi con una oppurtuna classe, che 
+ridefinisca anche l'operatore <<. Si rimuovano gli elementi della lista e si inseriscano in un BST, che dovrà implementare le funzionalità di:
 - Inserimento di un nuovo nodo
 - Visualizzazione degli elementi
 */
@@ -307,7 +307,7 @@ ostream& operator<<(ostream&out, const Albero& x)
 
 int main()
 {
-	int n;
+/*	int n;
 	Utente x[N];
 	n = leggi(x);								// con n ci prendiamo la dimensione esatta della Utente
 	insertionSort(x,n);
@@ -315,22 +315,22 @@ int main()
 	lista.inserimento(x,n);
 	cout<<"Lista: "<<endl;
 	cout<<lista<<endl;
-	
+	*/
 	int m;
 	Utente y[N];
 	m=leggi(y);
 	Albero tree;
-	for(int i=0; i<n; i++)
+	for(int i=0; i<m; i++)
 	{
-		tree.inserimento(y[i],n);
-		lista.cancellazione();
+		tree.inserimento(y[i],m);
+	//	lista.cancellazione();
 	}
-	cout<<"Lista dopo la cancellazione: "<<lista<<endl;
+	//cout<<"Lista dopo la cancellazione: "<<lista<<endl;
 	cout<<"Albero: "<<endl;
 	cout<<tree<<endl;
-	
+/*	
 	cout<<endl<<"Visita inOrder: ";
 	tree.inorder(tree.getradice());
-	
+	*/
 	return 0;
 }

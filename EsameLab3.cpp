@@ -1,12 +1,13 @@
 /*
-Si implementi una semplice classe BST, attraverso l'utilizzo dei template, con elementi di tipo generico T. La classe dovrà implementare le seguenti funzionalità:
+Si implementi una semplice classe BST, attraverso l'utilizzo dei template, con elementi di tipo generico T. La classe dovrà implementare le 
+seguenti funzionalità:
 - Inserimento di un nuovo elemento
 - Visualizzare gli elementi del BST
 
-Inoltre tale class BST dovrà essere in grado di gestire le chiavi duplicate. In particolare, le chiavi duplicate dovranno essere inserite nei sottoalberi destro 
-o sinistro della chiave duplicata già presente nel BST in modo alternato
-
-Nel metodo main, instanziare un BST di interi e uno di char, successivamente inserire dei valori e testare il corretto funzionamento delle funzionalità implementate  
+Inoltre tale class BST dovrà essere in grado di gestire le chiavi duplicate. In particolare, le chiavi duplicate dovranno essere inserite 
+nei sottoalberi destro o sinistro della chiave duplicata già presente nel BST in modo alternato
+Nel metodo main, instanziare un BST di interi e uno di char, successivamente inserire dei valori e testare il corretto funzionamento delle 
+funzionalità implementate  
 */
 
 #include <iostream>

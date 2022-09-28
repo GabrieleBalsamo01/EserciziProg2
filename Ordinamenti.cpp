@@ -7,7 +7,7 @@ void stampa(int a[], int n)
 		cout<<" "<<a[i]<<" ";
 	cout<<endl;
 }
-
+/*
 
 // Insertion Sort
 void InsertionSort(int a[], int n)		// passiamo l'array a e la dimensione n
@@ -43,7 +43,6 @@ int main()
 	return 0;
 }
 
-
 // Selection Sort
 
 #include<iostream>
@@ -61,6 +60,7 @@ void selezione(int a[], int n)				// passiamo l'array a e la dimensione n
 			aux=a[i];						// passo momentaneamente il valore di indice i ad aux
 			a[i]=a[indice];					// pongo l'elemento in posizione i uguale al suo successivo
 			a[indice]=aux;					// pongo l'elemento successivo uguale ad aux, ovvero il valore originario del precedente
+		
 	}
 }
 
@@ -73,7 +73,7 @@ int main()
 		cin>>a[i];
 	cout<<"Vettore inserito: "<<endl;
 	stampa(a,n);
-	selezione(a, n);
+	selezione(a,n);
 	cout<<"Vettore ordinato: "<<endl;
 	stampa(a,n);
 	return 1;
@@ -170,7 +170,7 @@ int main()
 	return 0;
 }
 
-
+*/
 // Merge Sort
 
 #include<iostream>
@@ -209,6 +209,7 @@ void merge(int a[], int left, int center, int right, int n)	// input l'array, in
 	}
 	for(k=left;k<=right;k++)			
 		a[k]=b[k];						// ricopia nell'array originale a tutti gli elementi ordinati presenti nell'array copia b
+	
 }
 
 void mergesort(int a[], int left, int right, int n)
